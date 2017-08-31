@@ -11,23 +11,23 @@ import java.util.Map;
  * <p/>
  * Created by HuQingmiao on 2015-5-29.
  */
-public interface BasicDao {
+public interface BasicDao<T extends BasicVo> {
 
-    int save(BasicVo basicVo);
+    int save(T basicVo);
 
-    int saveBatch(List list);
-
-
-    int update(BasicVo basicVo);
-
-    int updateIgnoreNull(BasicVo basicVo);
-
-    int updateBatch(List list);
+    int saveBatch(List<T> list);
 
 
-    int delete(BasicVo basicVo);
+    int update(T basicVo);
 
-    int deleteBatch(List list);
+    int updateIgnoreNull(T basicVo);
+
+    int updateBatch(List<T> list);
+
+
+    int delete(T basicVo);
+
+    int deleteBatch(List<T> list);
 
     int deleteByPK(Long id);
 
@@ -38,5 +38,5 @@ public interface BasicDao {
 
     public BasicVo findByPK(Long id);
 
-    public ArrayList find(Map<String, Object> paramMap, PageBounds pageBounds);
+    public ArrayList<T> find(Map<String, Object> paramMap, PageBounds pageBounds);
 }
