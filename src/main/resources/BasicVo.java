@@ -2,21 +2,14 @@ package your.project.vo;  //改为你工程的相应package
 
 import com.alibaba.fastjson.JSONObject;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.Serializable;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.HashMap;
 
 /**
  * PO 基类
  * <p/>
  * Created by HuQingmiao on 2015-5-13.
  */
-
-import java.util.*;
 
 /**
  * PO 基类
